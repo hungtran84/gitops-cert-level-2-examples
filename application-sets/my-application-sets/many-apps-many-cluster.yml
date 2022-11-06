@@ -18,6 +18,7 @@ spec:
               selector:
                 matchLabels:
                   argocd.argoproj.io/secret-type: cluster
+                  kubernetes.io/environment: '{{path.basename}}'
   template:
     metadata:
       name: '{{path.basename}}-{{name}}'
